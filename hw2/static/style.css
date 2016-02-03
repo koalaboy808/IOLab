@@ -1,0 +1,121 @@
+/*----------------- CSS RESET ------------------*/
+
+html, body, div, span, applet, object, iframe,
+/*h1, h2, h3, h4, h5, h6, */
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------- CSS RESET ------------------*/
+
+body {
+	margin: 0px;
+}
+
+section {
+	display: inline-block;
+}
+
+.logo img {
+	display: block;
+	/*border: 1px solid red;*/
+	padding: 20px;
+}
+
+.logo_background {
+	
+	background: darkblue;
+}
+
+.nav_background {
+	background: lightblue;
+}
+	
+.nav {
+	text-align:  left;
+	padding: 20px;
+	display: inline-block;
+}
+
+/* objects oriented on the right side */
+.float_right {
+	float: right;
+	display: inline-block;
+	width: 30%;
+}
+
+.right_article img {
+	display: inline-block;
+	width: 30%;
+}
+
+.slater img {
+	display: inline-block;
+	/*padding: 20px;*/
+	text-align: center;
+	width: 90%;
+}
+
+
+/* objects oreinted on the left side */
+.float_left {
+	/*display: inline-block;*/
+	float: left;
+	width: 70%;
+}
+
+.left_article {
+	/*display: inline-block;*/
+	width: 90%;
+}
+
+.header_pop {
+	color: orange;
+}
+
+.text_pop {
+	color: white;
+}
+
+.padding {
+	padding: 20px;
+}
