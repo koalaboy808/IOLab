@@ -47,3 +47,22 @@ table {
 /*----------------- CSS RESET ------------------*/
 
 /*Your main CSS should go here*/
+
+/*p {
+	color: red;
+}*/
+
+h1 {
+	font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 5px;
+}
+
+body {
+	width: 100%;
+	margin: 2em;
+}
+
+header {
+	margin-bottom: 20px;
+}
