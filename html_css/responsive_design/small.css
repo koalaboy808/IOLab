@@ -1,1 +1,16 @@
 /*Your mobile targeted css should go here*/
+
+
+
+
+.main-container {
+	width: 100%;
+}
+.project-image img {
+	width: 100%;
+}
+
+p {
+	color: red;
+}
+
