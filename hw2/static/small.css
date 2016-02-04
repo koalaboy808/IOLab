@@ -1,0 +1,63 @@
+/*.logo img {
+	display: block;
+	padding: 20px;
+}*/
+
+/*.logo_background {
+	
+	background: darkblue;
+}
+
+.nav_background {
+	background: lightblue;
+}*/
+	
+/*.nav {
+	text-align:  left;
+	padding: 20px;
+	display: inline-block;
+}
+*/
+/* objects oriented on the right side */
+.float_right {
+	/*float: right;*/
+	display: block;
+	width: 100%;
+}
+
+.right_article img {
+/*	display: inline-block;
+	width: 30%;*/
+}
+
+.slater img {
+	display: block;
+	/*padding: 20px;*/
+	text-align: center;
+	width: 100%;
+}
+
+
+/* objects oreinted on the left side */
+.float_left {
+	/*display: inline-block;*/
+	/*float: left;*/
+	width: 90%;
+}
+
+.left_article {
+	/*display: inline-block;*/
+	/*width: 90%;*/
+}
+
+/*.header_pop {
+	color: orange;
+}
+
+.text_pop {
+	color: white;
+}
+
+.padding {
+	padding: 20px;
+}*/
