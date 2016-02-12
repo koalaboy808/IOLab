@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> scatter.interactive </title>
+	    <script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="fonts.css">
+		
+		
+	<head>
+	<body>
+
+		<div class="top_bar">
+			<div>
+				<a href="../index.html" class = "p_home img_responsive"  > home </a> 
+				</br></br></br>
+				<h1> Strive HI Performance </h1>
+				<h1> Index School Distribution </h1>
+				
+				<p> By: Carlo Liquido and Jintao
+			<div>
+			</br>
+			<p>
+				<em>The Strive HI Index </em> will use multiple measures of achievement, growth, readiness and achievement gaps to understand schools’ performance and progress and differentiate schools based on their individuals needs for reward, support and intervention. The Index will consider the performance of all students as well as performance gaps between two new student subgroups: “High-Needs Students” and “Non-High Needs Students.”
+			</p>
+			<p>
+				<em> Classification: </em>Based on the Index score, schools are placed on one of 5 Steps — Recognition, Continuous Improvement, Focus, Priority and Superintendent’s Zone — as they strive for continuous improvement. The state’s highest-performing schools will receive recognition, financial awards and administrative flexibility to sustain their success. Low-performing schools will receive customized supports based on the lessons learned from Hawaii’s successful school turnarounds.
+			</p>
+		</div>
+
+		<div id="area1"></div>
+		<div id="area2">
+			
+			<h2> How do I use this graph? </h2>
+			<p> Use the filters below to see more specific combinations of data.</p> 
+			<p> Roll over the circles to see more data on each school.</p>
+			
+			<h2> Year</h2>
+			<select id="year" onClick="do_year()"><option value="2013">2013</option><option value="2014">2014</option></select><br><br>
+			
+			<h2> Complex Area</h2>
+			<select id="complexarea" onClick="do_year()">
+				<option value="all">All complex areas</option>
+				<option value="Farrington-Kaiser-Kalani">Farrington-Kaiser-Kalani</option>
+				<option value="Nanakuli-Waianae">Nanakuli-Waianae</option>
+				<option value="Charter Schools">Charter Schools</option>
+				<option value="Kapaa-Kauai-Waimea">Kapaa-Kauai-Waimea</option>
+				<option value="Kailua-Kalaheo">Kailua-Kalaheo</option>
+				<option value="Kaimuki-McKinley-Roosevelt">Kaimuki-McKinley-Roosevelt</option>
+				<option value="Pearl City-Waipahu">Pearl City-Waipahu</option>
+				<option value="Nanakuli-Waianae">Nanakuli-Waianae</option>
+				<option value="Campbell-Kapolei">Campbell-Kapolei</option>
+				<option value="Castle-Kahuku">Castle-Kahuku</option>
+				<option value="Hilo-Waiakea">Hilo-Waiakea</option>
+				<option value="Honokaa-Kealakehe-Kohala-Konawaena">Honokaa-Kealakehe-Kohala-Konawaena</option>
+				<option value="Kau-Keaau-Pahoa">Kau-Keaau-Pahoa</option>
+				<option value="Hana-Lahainaluna-Lanai-Molokai">Hana-Lahainaluna-Lanai-Molokai</option>
+				<option value="Baldwin-Kekaulike-Maui">Baldwin-Kekaulike-Maui</option>
+				<option value="Aiea-Moanalua-Radford">Aiea-Moanalua-Radford</option>
+				<option value="Leilehua-Mililani-Waialua">Leilehua-Mililani-Waialua</option>
+			</select><br><br>
+			<!--<input type="button" value="Filter" id="filter" onclick="do_year(dataset)" onclick="do_complex(dataset)" onclick="plot(dataset)"></input>-->
+		</div>
+
+		<script type="text/javascript">
+		$('#year', '#complexarea').on('change keypress paste focus textInput input', function(){
+			$('#year').val();
+			$('#complexarea').val();
+		});
+		
+		var dataset = [];
+		var w = 700;
+		var h = 600;
+		var padding = 50;
+		
+		var div = d3.select("body").append("div")
+		.attr("class","tooltip")
+		.style("opacity",0);
+				
+		var svg = d3.select("#area1")
+					.append("svg")
+					.attr("width",w)
+					.attr("height",h);
+	
+		d3.csv("Interactive_Scatter_2014_and_2015.csv", function(data) {
+			window.orig_data = data;
+		  	var dataset = data.forEach(function(d) {
+		      	 d.classificationplace = +d.classificationplace;
+				 d.totalindex = +d.totalindex;
+				 d.year = +d.year;
+				 d.all = +d.all;
+			  });
+			plot(dataset);
+		  });
+		 
+		var xScale = d3.scale.ordinal()
+					/*.domain([0, d3.max(dataset, function(d) { return d.classificationplace;
+					})])*/
+					.domain(["Classification Not Determined","Priority","Focus", "Continuous Improvement","Recognition"])
+					.rangePoints([padding, w-padding],1);
+
+		var yScale = d3.scale.linear()
+						.domain([0, 400])
+						.range([h-padding, padding]);
+		
+		//Create x and y axis
+		var xAxis = d3.svg.axis()
+						.scale(xScale)
+						.orient("bottom");
+					
+		var yAxis = d3.svg.axis()
+						.scale(yScale)
+						.orient("left");	
+						
+						//Call X axis
+							svg.append("g")
+								.attr("class", "axis")
+								.attr("transform","translate(0,"+ (h-padding) +")")
+								.call(xAxis);
+						// Call Y axis
+							svg.append("g")
+								.attr("class","axis")
+								.attr("transform","translate("+ padding +",0)")
+								.call(yAxis);
+								
+							    svg.append("text")
+							    	.attr("class", "formatting_axis")
+							    	.attr("text-anchor", "end")
+							    	.attr("x",-50)
+							    	.attr("y", 65)
+							    	.attr("dy", ".75em")
+							    	.attr("transform", "rotate(-90)")
+							    	.text("Strive HI Index");
+				
+								    svg.append("text")
+								    	.attr("class", "formatting_axis")
+								    	.attr("text-anchor", "end")
+								    	.attr("x",w-55)
+								    	.attr("y", h-90)
+								    	.attr("dy", ".75em")
+								    	.text("Classification");
+												  
+		function do_year(dataset){
+			var complex = $('#complexarea').val();
+			if(complex == 'all'){
+				var dataset = window.orig_data.filter(function(d){ return d.year == $('#year').val();});
+				plot(dataset);
+			} else{
+				var dataset = window.orig_data.filter(function(d) { return d.year == $('#year').val() && d.complexareaname == complex; });
+				plot(dataset);
+			}
+		};
+	
+		
+		function plot(dataset){
+							 
+    		  	var circle = svg.selectAll("circle")
+					.data(dataset, function(d){return d.classification + d.totalindex + d.complexareaname + d.year + d.school + d.all});
+				
+					circle
+					.enter()
+					.append("circle")
+					.attr("cx", function(d) {
+					   		return xScale(d.classification);
+					   })
+					.attr("cy", function(d) {
+					   		return yScale(d.totalindex);
+					   })
+					.attr("r",5)
+					.on("mouseover", function(d){
+						div.transition()
+						.duration(200)
+						.style("opacity",.9);
+						//.text("MSGP: " + Math.round(d.individ_msgp) + " , Tripod: " + d.sevencs_nce_median)
+						div.html( (d.school) + "</br>" + d.totalindex + "pts")
+						.style("left",(d3.event.pageX)+7+"px")
+						.style("top",(d3.event.pageY)+ (-20) +"px");
+					})
+					//.on("mouseover", animateFirstStep);
+					.on("mouseout",function(d){
+						div.transition()
+						.duration(500)
+						.style("opacity",0);
+					});
+	            
+					circle.exit().remove();
+			   
+			};
+	
+		</script>
+	</body>
+</html>
