@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8" />
+            <script src="js/bootstrap.min.js"></script>
+            <link href="css/bootstrap.css" rel="stylesheet">
+            <link rel="stylesheet" href="css/chocolat.css" />
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery.chocolat.js"></script>
+            <link href="css/customized.css" rel="stylesheet">
+        
+        <title>Chocolat — demo</title>
+        <script>
+            $(function(){
+                $('#example0').Chocolat({
+                      imageSize: 'contain'
+                });
+
+                $('#example1').Chocolat({
+                    loop           : true,
+                    imageSize     : 'cover',
+                    overlayOpacity : 0.9
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+      <div class="container">
+        <a href="../index.html" class = "p_home img_responsive"  > home </a>
+        <p class="h1_projects" style="color: #1E4F53;"> Growth vs Achievement: </p>
+        <p class="h2_projects"> How does student growth relate to student achievement? </p>
+        <p class = "p_projects" style="color: #7F7F7F;"> [Data Visualization] [R]  [RStudio] </p>
+        </br></br>
+
+
+
+         <div id="example0">
+            <a class="chocolat-image" href="../img/Relationship Between Growth and Achievment by Elementary Schools.png" title="foo">
+                <img src="../img/Relationship Between Growth and Achievment by Elementary Schools.png" style="width:60%; height:auto; border:.1em solid #020122;" alt="">
+            </a>
+        </div>
+
+        </br></br></br></br>
+
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="h2_fitted"> Role </div>
+            </div>
+            <div class="col-sm-9">
+                <p class = "p_projects">
+                    Project lead in Data Analysis and Visualization
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="h2_fitted"> Motivation </div>
+            </div>
+            <div class="col-sm-9">
+                <p class = "p_projects">
+                    Public Schools are evaluated by a number of categories--two of the main ones being student achievement and student growth. Both play a large role in determining the overall success of the school. Achievement tests have been administered for decades. Growth scores, on the other hand, are new and little understood. They take into account how students perform against similar peers across time. Principals and teachers, however, don't but into this new analysis. Their theory is--schools with high-performing students will have higher growth while schools with "low-performing" students will have lower growth. My job was to disprove their theory using real objective data. 
+                </p>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="h2_fitted"> Solution </div>
+            </div>
+            <div class="col-sm-9">
+                <p class = "p_projects">
+                    Although a seemingly easy answer, the data visualization took on a number of iterations. The deeper I went into the problem, the more challenges I faced. How do I balance originality and familiarity? How do I introduce multidimensionality of data without causing unecessary complexity? How do I taylor the graphic so that teachers, principals, and administrative leaders can equally understand the meaning? And how do I execute all this within a singel static page?
+                </p>
+                <p class = "p_projects">
+                    By breaking down the four Achievement groups (Well Below, Approaches, Meets, Exceeds) by their Student Growth Percentile groups (Low, Typical, High) we see a fairly even distribution (range of 31% to 37%). From a very high level, this two-dimensional graph demonstrates that students who have low Achievement scores (ie, Well Below) and students who have high Achievement scores (ie, Exceeds) share a similar and fairly equal distribution of Low, Typical, and Normal student growth. Drawing a scattor plot of Achievement score by Student Growth Percentile deptics a simlar story at a more granular level. The share of student growth remains equally distributed within each Achievement group. Moreover, within each Achievement group, we notice a slight positive correlation between Achievement score and Student Growth.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="h2_fitted">  Reflection </div>
+            </div>
+            <div class="col-sm-9">
+                <p class = "p_projects">
+                    There are an inumerable number of ways to represent data. This project made that hardship very clear. I fumbled around with a number of different sketches and threw out most. But in the end, the most important factor to the success of the visualization was to pick a story based on the user's needs. By empathizing with the user and defining a goal, I was better able to ideate and create something impactful.
+                </p>
+            </div>
+        </div>
+
+        </br></br>
+    <a href="../index.html" class = "p_home img_responsive"  > home </a>    
+    </br></br>
+    </div>
+
+        
+    </body>
+
+</html>
