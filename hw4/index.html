@@ -1,0 +1,80 @@
+<!--
+
+1. (1 point) User sees labeled ‘to-do’ and ‘completed items’ lists, which are empty upon page load. The lists are visually distinct from each other. 
+
+2. (3 points) User can add one ‘to-do’ item at a time using a text input field and an ‘add to list’ button. 
+
+3. (1 point) Each newly-added ‘to-do’ item appears at the top of the ‘to-do’ list (not the bottom). 
+-->
+
+<html>
+<head>
+
+    <title> Homework4 Javascript and jQuery </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="_css/style.css">
+     <!-- jQuery is required by Materialize to function -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    
+
+</head>
+    <body>
+        
+        <div class="wrapper">
+            <div class="row">
+                <div class="col s12 m5 l5">
+                    <h1> Hello Mr. Hw4 </h1>
+
+                    <p> Here you have a way to add things to your "To Do" list by adding and submitting text using the "Add Item" button. Items will automatically appear in your "To Do" list. When you have completed any task, click the "Move Me" button to send your item on over to the "Completed Items" list. Simiarly, you can use the respective button to move your item back to the "To Do" list. Enjoy your list making! Dis some 202 shiz</p>
+                </div>
+                <div class="col s12 m5 l5 ">
+                    <img src="organize.png" class="fill_area">
+                </div>
+            </div>
+
+
+            <input type="text" id="todo-item-input" ><br>
+            <button class="waves-effect waves-light blue btn" id="new-item"> Add item </button>
+        </br></br>
+            <div class="row">
+                <div class="card-panel col s12 m5 l5">
+                    <div class="padding-header card-panel  teal lighten-4"> To Do </div>
+                    <div class="extra-padding-panel" id="list_todo"> </div>
+                </div>
+                <div class="card-panel col s12 m5 l5">
+                    <div class="padding-header card-panel red lighten-4"> Completed Items </div>
+                    <div class="extra-padding-panel" id="list_completed"> </div>
+                </div>
+            </div>
+        
+            <script type="text/javascript" src="_js/main.js"> </script>
+
+    </body>
+</html>
+
+
+<!--
+4. (4 points total) User can click a button within each ‘to-do’ item to mark it as complete, at which point:
+a. (2 point) The ‘to-do’ item disappears from the ‘to-do’ list
+b. (1 point) The ‘to-do’ item appears at the top of the ‘completed items’ list.
+c. (1 point) Items on the ‘completed items’ list should be styled differently than those on the ‘to-do’ list as an additional visual indication of their completion.
+
+5. (3 points total) User can click a button within each ‘complete’ item to ‘unmark’ it as complete, at which point:
+a. (2 point) The ‘complete’ item disappears from the ‘completed items’ list.
+b. (1 point) The ‘complete’ item appears at the top of the ‘to-do’ list with the same styling as the other ‘to-do’ list items.
+
+6. Items on each list remain there until the user marks or ‘unmarks’ them.
+
+7. (1 point) Your site has a title and intuitive labeling or instructions on how to use it.
+
+8. (4 points) You can use only jQuery and JavaScript – no additional plugins/libraries.
+
+9. (1 point) Your JS and CSS code is separate from your HTML (i.e., there should be no inline CSS styling or JavaScript within your HTML file).
+
+10. (1 point) All of your JavaScript is commented appropriately.
+
+11. (1 point) Your code is clean and concise (minimal repetition and unused code)-->

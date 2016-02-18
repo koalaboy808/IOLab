@@ -1,0 +1,45 @@
+/*body {
+	width: 100%;
+}*/
+
+.padding-header {
+	margin: 1em;
+}
+
+.wrapper {
+	padding: 2em;
+}
+
+.container {
+	border: 1px;
+	display: inline-block;
+	width: 35%;
+}
+
+.todo_style {
+	color: #105B63;
+}
+
+.completed_style {
+	color: #BD4932;
+}
+
+.extra-padding-panel {
+	margin: 2em;
+}
+
+p {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	/*width: 40%;*/
+	text-align: left;
+}
+
+.fill_area {
+	width: 100%;
+	padding-left: 2em;
+	text-align: center;
+}
+/*#list_completed {
+	margin: 2em;
+}*/
