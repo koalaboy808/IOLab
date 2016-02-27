@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>San Francisco Rainfall</title>
+
+        <!-- Remember to edit the CSS so that your result looks similar
+        to expectedresult.png -->
+        <link rel="stylesheet" href="static_high/css/style.css">
+        <link rel="stylesheet" href="static_high/css/font.css">
+        <script src="static_high/_js/jquery-1.11.0.min.js"></script>
+        <script src="static_high/_js/highcharts.js"></script>
+        <script type="text/javascript" src="http://cdn-demo.webpivottable.com/lib/grouped_categories/grouped-categories.js"></script>
+        
+    </head>
+
+<body>
+
+        
+<div id="wrapper">
+     
+    <div class="background_style">
+        <p><a href="index.html" class = "p_home"  > home </a> </p>
+        <div>
+            
+
+        </div>
+        <h1> How has the online music business changed over the past few years?</h1>
+
+      
+        <p>
+            For a class project, we were given a dataset of aggregated music purchases over the course of four years.  The <b>tricky part</b>: How to design a visualization within the confined space of a 800 x 600 pixel area. Given that the <b>user </b> is educated and understands the background of the music scence, can the user easily see common trends, make quick comparisons, and distinguish each value? How well does the visualization follow heuristic guidelines? Are you able to answer a wide variety of likely questions about the data?  Clearly, no one design will answer all questions, but <b>better designs</b> will answer more.
+        </p>
+        <p>
+            The data consisted of a multitude of types of data: 1) <b>Quantitative Data</b>--total tracks purchased and amount of music streamed; 2) <b>Ordinal Data</b>--fan loyalty scores from 1-6 with lower being better; 3) <b>Categorical Data</b>--genre of music. The data was collected from years 2012-2015.
+        </p>
+        </br>
+
+    </div>
+    <div class="full">
+        <!--<div>    
+            <div>
+                <div class="header_text">
+                <h3> Streaming Percentage</h3>
+                <p> View trends of music by genre </p>
+            </div>
+            <div class="header_text">
+                <h3> Streaming Percentage</h3>
+                <p> View trends of music by genre </p>
+            </div>
+        </div>-->
+
+        <table id="table-sparkline">
+            
+            
+            <tbody id="tbody-sparkline">
+
+                <!--<thead> <h3>Streaming Percentage<h3></thead>-->
+                <tr>
+                    <th class="th_header">Genre</th>
+                    <th class="th_header">2012%</th>
+                    <th class="th_header" style="padding-left:20px">Streaming</th>
+                    <th class="th_header">2015%</th>
+                </tr>
+                <!--<tr>
+                    <th class="th_header"></th>
+                    <th class="th_header"></th>
+                    <th class="th_header" style="padding-left:20px"></th>
+                    <th class="th_header"></th>
+                </tr>-->
+				
+                <tr>
+                    <th>R&B</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 7, 9, 25 "/>
+                    <td>25%</td>
+                </tr>
+                <tr>
+                    <th>Latin</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 7, 9, 11 "/>
+                    <td>11%</td>
+                </tr>
+                <tr>
+                    <th>Dance</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 7, 9, 11 "/>
+                    <td>11%</td>
+                </tr>
+                <tr>
+                    <th>Jazz</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 5, 9, 11 "/>
+                    <td>11%</td>
+                </tr>
+                <tr>
+                    <th>Classical</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 5, 9, 9 "/>
+                    <td>9%</td>
+                </tr>
+                <tr>
+                    <th>Christian</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 5, 9, 9 "/>
+                    <td>9%</td>
+                </tr>
+                <tr>
+                    <th>Rock</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 5, 9, 9 "/>
+                    <td>9%</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <th>3%</th>
+                    <td data-sparkline="3, 3, 4, 5 "/>
+                    <td>5%</td>
+                </tr>
+                <tr class="no_line">
+                    <th class="no_line">Pop</th>
+                    <th class="no_line" >3%</th>
+                    <td class="no_line" data-sparkline="3, 5, 9, 2 "/>
+                    <td class="no_line">2%</td>
+                </tr >
+
+                
+                
+            
+            </tbody>
+        </table>
+        <div id="container1">
+        <!--<h3> Percent of Total Tracks by Genre and Year </h3>-->
+        </div>
+
+    </div>
+
+    <div class="spacing_photo">
+        <p>
+            As a team of two, we went through a number of <b>iterations</b>. The project emphasized peer learning, namely to be open to new suggestions and changes in direction (your first idea is most likely not your best idea!).  Seperately, we both created <b>3 designs</b> and shared all 3 designs with each other for critique and revision. We both quickly realized that visualization <b>real estate</b> was our biggest hurdle--how to convey the most amount data without losing sight of the basic information. 
+        </p>
+
+        <p>
+            We utilized two main types of charts: line and bar. The line graph was most suited for percent streaming, being for the simple reason that line graphs are accuracte and demonstrate trends in data well. A bar graph was utilized for percent of total tracks so the user could make precise comparisons. We both concluded that using absolute total tracks purchased was misleading (eg, an absolute increase in purchases of Rock music from 2014 to 2015 may actually be a decrease in relative amount of Rock music purchased). Deriving a percent allocation leads to a more informed comparison. 
+        </p>
+        <p>
+            Separately, the two graphs provide substantial information. The user can easily tell that streaming generally increases from 2012 to 2015. Ordering the genre frees the user from mapping out those comparisons and allows him/her to drill down into the data (eg, R&B has a distinct increase while Pop remains relatively stable). The percent of total tracks purchased also reveals some interesting information on first glance. We realized that the humans' eye is selective--we made use of this by grouping elements by fan loyalty. Genres with fan loyalty scores from 1 to 4 generally seem have higher purcahses while genres with scores greater than 4 have extremely low purchases.  
+        </p>
+        <p>
+            The ability to make comparisons was one of our major goals for the user. Although color is generally not good at inherently coding data, we utilized general color patterns to highlight groupings. Without looking at any number, one can deduce that warmer colors group on the lower end of streaming music while cool colors dominate the upper region. Similarly, warmer colors reside on the left end of the total tracks purchased while cooler colors take on the right region. The user can make further judgements as to why these patterns exist and if they make sense to what one might have expected.
+        </p>
+
+    </div>
+    <div class="spacing_photo">
+        <img src="static_high/img/Correlation btw Streaming and Loyalty.png" alt="Smiley face">
+        <img src="static_high/img/Movement of Tracks and Streaming.png" alt="Smiley face">
+        <img src="static_high/img/Ordinal Movement btw Fan and Tracks.png" alt="Smiley face">
+
+    </div>
+    </br></br>
+    <p><a href="index.html" class = "p_home img_responsive"  > home </a> </p> 
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+$(function () {
+    /**
+     * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
+     * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
+     */
+    Highcharts.SparkLine = function (a, b, c) {
+        var hasRenderToArg = typeof a === 'string' || a.nodeName,
+            options = arguments[hasRenderToArg ? 1 : 0],
+            defaultOptions = {
+                chart: {
+                    renderTo: (options.chart && options.chart.renderTo) || this,
+                    backgroundColor: null,
+                    borderWidth: 0,
+                    type: 'area',
+                    margin: [2, 10, 2, 10],
+                    width: 100,
+                    height: 45,
+                    style: {
+                        overflow: 'visible'
+                    },
+                    
+                    skipClone: true
+                },
+                title: {
+                    text: ''
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    },
+                    title: {
+                        text: null
+                    },
+                    startOnTick: false,
+                    endOnTick: false,
+                    tickPositions: []
+                },
+                yAxis: {
+                    endOnTick: false,
+                    startOnTick: false,
+                    labels: {
+                        enabled: false
+                    },
+                    title: {
+                        text: null
+                    },
+                    tickPositions: [0]
+                },
+                legend: {
+                    enabled: false
+                },
+
+                tooltip: {
+                    backgroundColor: null,
+                    borderWidth: 0,
+                    shadow: false,
+                    useHTML: true,
+                    hideDelay: 0,
+                    shared: true,
+                    padding: 0,
+                    positioner: function (w, h, point) {
+                        return { x: point.plotX - w / 2, y: point.plotY - h };
+                    }
+                },
+                colors: ['#8E2800', '#CF532B', '#FFB03B', '#FFF0A5', '#FFF0A5', '#225378', '#386E52', '#386E52', '#386E52'],
+                plotOptions: {
+                    series: {
+                        animation: false,
+                        lineWidth: 1,
+                        shadow: false,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        marker: {
+                            radius: 1,
+                            states: {
+                                hover: {
+                                    radius: 2
+                                }
+                            }
+                        },
+                        fillOpacity: 0.5
+                    },
+                    column: {
+                        negativeColor: '#910000',
+                        borderColor: 'silver'
+                    }
+                }
+            };
+
+        options = Highcharts.merge(defaultOptions, options);
+
+        return hasRenderToArg ?
+            new Highcharts.Chart(a, options, c) :
+            new Highcharts.Chart(options, b);
+    };
+
+    var start = +new Date(),
+        $tds = $('td[data-sparkline]'),
+        fullLen = $tds.length,
+        n = 0;
+
+    // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
+    // can take some seconds, so we split the input into chunks and apply them in timeouts
+    // in order avoid locking up the browser process and allow interaction.
+    function doChunk() {
+    	var color = [['#FFF0A5'], ['#386E52'], ['#386E52'], ['#225378'], ['#386E52'], ['#CF532B'], ['#FFF0A5'], ['#FFB03B'], ['#8E2800']]
+        var time = +new Date(),
+            i,
+            len = $tds.length,
+            $td,
+            stringdata,
+            arr,
+            data,
+            chart;
+
+        for (i = 0; i < len; i += 1) {
+            $td = $($tds[i]);
+            stringdata = $td.data('sparkline');
+            arr = stringdata.split('; ');
+            data = $.map(arr[0].split(', '), parseFloat);
+            chart = {};
+
+            if (arr[1]) {
+                chart.type = arr[1];
+            }
+            $td.highcharts('SparkLine', {
+                series: [{
+                    data: data,
+                    pointStart: 1
+                }],
+                tooltip: {
+                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', Q{point.x}:</span><br/>',
+                    pointFormat: '<b>{point.y}.000</b> USD'
+                },
+
+                colors: color[n],
+                chart: chart
+            });
+
+
+            n += 1;
+
+            // If the process takes too much time, run a timeout to allow interaction with the browser
+            if (new Date() - time > 500) {
+                $tds.splice(0, i + 1);
+                setTimeout(doChunk, 0);
+                break;
+            }
+
+            
+        }
+    }
+    doChunk();
+
+});
+
+
+
+            $(function () {
+              Highcharts.setOptions({
+                chart: {
+                  style: {
+                    fontFamily: "Proxima Nova,Arial,sans-serif"
+                  }
+                },
+                legend: {
+                  borderRadius: 0,
+                  itemStyle: {
+                    color: "#000000",
+                    fontFamily: "Proxima Nova,Arial,sans-serif"
+                  }
+                },
+                title: {
+                  style: {
+                    color: "#000000",
+                    fontFamily: "Proxima Nova,Arial,sans-serif",
+                    fontSize: "20px",
+                    fontWeight: "bold"
+                  }
+                },
+
+                tooltip: {
+                  // ADD CODE HERE to set up the tooltip options.
+                    // Hints: borderRadius, borderWidth, shadow
+                  
+                  style: {
+                    color: "#333333",
+                    fontFamily: "Proxima Nova, sans-serif",
+                    fontSize: "14px",
+                    padding: "10px"
+                  }
+                },
+                xAxis: {
+                  labels: {
+                    style: {
+                      color: "#333333",
+                      fontFamily: "Proxima Nova,Arial,sans-serif"
+                    }
+                  },
+                  // min: 0, max: 5
+                },
+                credits: {
+                    enabled: false,
+                    margin: 0
+                },
+                legend: {
+                    enabled: false
+                },
+                
+                yAxis: {
+                  labels: {
+                    style: {
+                      color: "#333333",
+                      fontFamily: "Proxima Nova,Arial,sans-serif"
+                    }
+                  },
+                  min: 0,
+                  plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: "#808080"
+                  }],
+                  title: {
+                    style: {
+                      color: "#333333",
+                      fontFamily: "Proxima Nova, sans-serif",
+                      fontSize: "1.2em",
+                    },
+                    text: "Percent of Total Tracks (by year) "
+                  }
+                }
+              })
+            });
+            var chartOne = {
+                chart: {
+                // ADD CODE HERE to fill in the renderTo property with the div ID for your first chart container
+                // ADD CODE HERE to fill in the type property to make a bar chart
+                    renderTo: "container1",
+                    type: "column"
+                },
+                title: {
+                    style: {
+                      color: "#333333",
+                      fontFamily: "Proxima Nova, sans-serif",
+                      fontSize: "18px",
+                    },
+                    text: "Percent of Total Tracks by Genre and Fan Loyality"
+                    // text:""
+                },
+                subtitle: {
+                    style: {
+                      color: "#333333",
+                      fontFamily: "Proxima Nova, sans-serif",
+                      fontSize: "18px",
+                      opacity: "0.5"
+                    },
+                    floating: true,
+                    y: 60,
+                    text: "Years 2012-2015"
+                    // text:""
+                },
+                plotOptions: {
+                    column: {
+                        colorByPoint: true
+                    }
+                },
+
+                colors: ['#8E2800', '#CF532B', '#FFB03B', '#FFF0A5', '#FFF0A5', '#225378', '#386E52', '#386E52', '#386E52'],
+                xAxis: {
+                    labels: {
+                        // style: {
+                        //     color: "red",
+                        //     fontSize: "20px",
+                        //     rotation: -45
+                        // },
+
+                        groupedOptions: [{
+                            style: {
+                                fontWeight: "bold"                                 // set red font for labels in 1st-Level  
+                            }
+                        }, {
+                            rotation: -45, // rotate labels for a 2nd-level
+                            align: 'right'
+                        }],
+                        rotation: 0 // 0-level options aren't changed, use them as always
+                    },
+                    categories: [{
+                        name: "One",
+                        categories: ["Pop"]
+                    }, {
+                        name: "Two",
+                        categories: ["Christian"]
+                    }, {
+                        name: "Three",
+                        categories: ["Country"]
+                    }, {
+                        name: "Four",
+                        categories: ["R&B", "Rock"]
+                    }, {
+                        name: "Five",
+                        categories: ["Jazz"]
+                    }, {
+                        name: "Six",
+                        categories: ["Classical", "Dance", "Latin"]
+                    }]
+                },
+                // xAxis: {
+                //     categories: []
+                // },
+                series: [] // This series data is pulled through a for loop that loops through the CSV.
+            };
+            // onlyUnique function gets unique values in an array
+            function onlyUnique(value, index, self) { 
+                return self.indexOf(value) === index;
+            }
+
+
+            // open csv file as data
+            $.get("static_high/_data/VATW_datasets_Music_fanadjusted.csv", function (data) {
+                var lines = data.split("\r");
+                // console.log(lines);
+
+                // Define variables for storing data
+                var genre = [];
+                var year = [];
+                var total_track_by_year = [[],[],[],[]]
+                
+                var fans_value = []
+                var fans_value_by_year = [[],[],[],[]]
+
+                var unique_genre = [];
+                var unique_year;
+
+                var total_tracks_header = [];
+                var total_tracks_value = [];
+
+                var sum_tracks_header = [];
+                var sum_tracks_value = [];
+
+                // run through each line using index and value for ifelse statements
+                $.each(lines, function(lineNo, line) {
+                    var items = line.split(",");
+                    
+                    // for non-header rows... do something
+                    if (lineNo > 0) {
+                        genre.push(items[0]);
+                        year.push(items[1]);
+
+                        // chartOne.xAxis.categories.push(items[0]);
+
+                        unique_genre = genre.filter(onlyUnique);
+
+                        unique_year = year.filter(onlyUnique);
+
+                        fans_value.push(parseFloat(items[4]));
+
+                        total_tracks_value.push(parseFloat(items[6]));
+                        sum_tracks_value.push(parseFloat(items[5]));
+
+                    // for header rows... define the appropriate header labels
+                    } else if (lineNo === 0) {
+                        total_tracks_header = items[2];
+                        sum_tracks_header = items[5];
+                    }
+
+
+                    // console.log("line number: " + lineNo)
+                    // console.log(line + "\n\n");
+                });
+
+
+                console.log("genre: " + genre);
+                console.log("year: " + year);
+                console.log("unique genre: " + unique_genre);
+                console.log("unique year: " + unique_year);
+                console.log("total_tracks_header: " + total_tracks_header);
+                console.log("total_tracks_value: " + total_tracks_value.length);
+                console.log("fans_value: " + fans_value.length);
+
+                // CREATE xAxis from unique_genre
+                // Note: had to loop through to push into an arary, or else
+                //       it would show up as an object
+                // $.each(unique_genre, function( index, value) {
+                //     chartOne.xAxis.categories.push(value);
+                // });
+
+                function colors(i) {
+                    console.log("what is i: " + i)
+                    converted_colors = [];
+
+                    for (_array in i) {
+                        // console.log("what is _array: " + _array)
+                        // console.log("does _array == 1: ")
+                        // console.log(parseInt(_array) === 1)
+                        if (parseInt(_array) == 0) {
+                            converted_colors.push("#1F77B4"); // winter
+                        } else if (parseInt(_array) == 1) {
+                            converted_colors.push("#DBDD8D");
+                        } else if (parseInt(_array) == 2) {
+                            converted_colors.push("#2CA02C");
+                        } else if (parseInt(_array) == 3) {
+                            converted_colors.push("#DBDD8D");
+                        } else if (parseInt(_array) == 4) {
+                            converted_colors.push("#DBDD8D");
+                        } else {
+                            converted_colors.push("#D62728");
+                        }
+                    };
+                    return converted_colors
+                    
+                };
+                
+
+                console.log("type of unique genre:" + typeof unique_genre)
+                
+                // get values grouped by total tracks by year:
+                // step 1: loop through unique year (2012, 2013, 2014, 2015)
+                // step 2: create temp array
+                // step 3: loop through every year (ie unique year * unique_genre.length)
+                // step 4: (SUPER INNEFICIENT) if unique_year = given year, then 
+                //         push into the temp array
+                // step 5: push the temp array into the first total_tracks object
+                // step 6: this should loop over four times for each year
+                for (var i=0; i < unique_year.length; i++) {
+                    var temp_year = [];
+                    for (var j=0; j < year.length; j++) {
+                        if (unique_year[i] === year[j]) {   
+                            temp_year.push(parseFloat(total_tracks_value[j]));
+                        };
+                    };
+                    console.log("temp_year " + unique_year[i] + " " + temp_year);
+                    // console.log("temp_year: " + temp_year)
+                    total_track_by_year[i].push(temp_year);
+                }
+                console.log(total_track_by_year);
+
+                // COLORS !!!!
+                for (var i=0; i < unique_year.length; i++) {
+                    var temp_year = [];
+                    for (var j=0; j < year.length; j++) {
+                        if (unique_year[i] === year[j]) {   
+                            temp_year.push(parseFloat(fans_value[j]));
+                        };
+                    };
+                    console.log("temp_year " + unique_year[i] + " " + temp_year);
+                    // console.log("temp_year: " + temp_year)
+                    fans_value_by_year[i].push(temp_year);
+                }
+                console.log(fans_value_by_year);
+
+                // create series data:
+                // there should be four years
+                // loop through unique_year and total_track
+                for(var i = 0; i < unique_year.length; i++) {
+        
+                    var chartOneData = {
+                        name: unique_year[i],
+                        // color: colors(fans_value_by_year[i][0]),
+                        data: total_track_by_year[i][0],
+                        showInLegend: false
+                    };
+                    console.log("fans_value_by_year: " + typeof fans_value_by_year[i][0][0])
+                    // push the chartOneData object to "chartOne.series":
+                    chartOne.series.push(chartOneData);
+                };
+                
+                console.log(chartOne);
+
+                chartOne = jQuery.extend(true, {}, chartOne);
+                var chart1 = new Highcharts.Chart(chartOne);
+
+            });
+
+
+
+        </script>    
+
+  </body>
+
+</html>
