@@ -5,6 +5,20 @@ $('#submit-survey').on('click', function submitSurvey() {
 	var feBefore = $("input[name=front-end-before]").val();
 	var feAfter = $("input[name=front-end-after]").val();
 
+	// $("button").click(function(){
+    $.post("submit-survey",
+    {
+        color: color,
+        food: food,
+        vacation: vacation,
+        feBefore: feBefore,
+        feAfter: feAfter
+    },
+    function(data, status){
+        // alert("Data: " + data + "\nStatus: " + status);
+        document.body.parentNode.innerHTML = data
+    });
+
 });
 
 $("#results-email-container").on('click', '#email-results-button', function emailResults() {

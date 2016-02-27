@@ -42,6 +42,9 @@ def submitSurvey():
 
 		surveyResponse['fe-before'] = request.form.get('feBefore')
 		surveyResponse['fe-after'] = request.form.get('feAfter')
+		surveyResponse['color'] = request.form.get('color')
+		surveyResponse['food'] = request.form.get('food')
+		surveyResponse['vacation'] = request.form.get('vacation')
 		return render_template('results.html', name=username, email=email, surveyResponse=surveyResponse)
 	else:
 		return render_template('login.html')
