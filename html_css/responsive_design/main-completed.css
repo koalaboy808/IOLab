@@ -169,6 +169,16 @@ h1 {
 	color: #020122;
 }
 
+h2 {
+	font-family: Proxima Nova, sans-serif;
+	font-size: 1.3em;
+	/*color: #d33e43;*/
+	color: #020122;
+	opacity: 0.7;
+	font-weight: normal;
+	padding-top: 1em;
+}
+
 h3 {
 	text-transform: uppercase;
 	font-family: Proxima Nova, sans-serif;

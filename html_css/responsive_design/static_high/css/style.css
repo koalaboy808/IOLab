@@ -1,0 +1,232 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* RESET CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+body {
+    font-style: Proxima Nova;
+    font-size: 18px;
+}
+
+h1, h2, h3, p {
+    /*margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-top: 0.4em;*/
+}
+
+h1 {
+    font-size: 3em;
+    text-align: left;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: bold;
+    padding-bottom: 1em;
+    color: #1E4F53;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: left;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: bold;
+    color: #1E4F53;
+}
+
+
+
+p, th, td {
+    font-size: 0.8em;
+}
+
+th, h3, td {
+    /*font-weight: bold;*/
+    text-align: left;
+    font-family: Proxima Nova, sans-serif;
+}
+
+td, th {
+    padding: 5px;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    height: 20px;
+}
+
+td {
+    padding-left: 20px;
+}
+
+thead th {
+    /*border-top: 2px;*/
+    border-bottom: 2px ;
+}
+
+.no_line {
+    border-bottom: none;
+}
+
+.fan_display {
+
+    display: inline;
+}
+
+
+#wrapper {
+    text-align: center;
+    margin: 30px;
+    padding: 60px;
+    width: 1000px;
+    height: 600px;
+
+}
+
+.full {
+    width:95%;
+    border: 0.1em solid silver;
+    padding: 30px;
+}
+
+#container1 {
+    width: 600px;
+    height: 625px;
+    padding-left: 8em;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#table-sparkline {
+    width:20%;
+    height: 100%;
+    /*border-collapse: collapse;*/
+}
+
+#table-sparkline, #container1 {
+    display: inline-block;
+}
+
+.fan_display {
+
+    display: inline;
+}
+
+.header_text {
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.th_header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+    border-bottom: none;
+    border-top: none;
+
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.highcharts-tooltip>span {
+    background: white;
+    border: 0.1em solid silver;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #888;
+    padding: 1px;
+}
+
+.spacing_photo {
+    margin-top: 5em;
+    text-align: left;
+    /*margin-bottom: 2em;*/
+}
+
+p {
+    font-family: Proxima Nova, sans-serif;
+    /*display: inline-block;*/
+    text-align: left;
+    font-size: 18px;
+    opacity: 0.8;
+    line-height: 200%;
+    /*margin-top: 3em;*/
+    margin-bottom: 3em;
+    width: 75%;
+/*    padding-bottom: 10px;
+    margin-left: 15px;*/
+}
+
+b {
+    font-weight: bold;
+}
+
+.p_home {
+    padding-left: 0px;
+    /*padding-top: 15px;*/
+    font-size: 16px;
+    color: #7F7F7F;
+    /*letter-spacing: 0.2px;*/
+    /*margin: 0 0 10px;*/
+    font-family: Proxima Nova;
+    font-weight: normal;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.img_border {
+    border-width: 1px;
+    border-color: Black;
+}
+

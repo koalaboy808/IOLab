@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>San Francisco Rainfall</title>
+
+        <!-- Remember to edit the CSS so that your result looks similar
+        to expectedresult.png -->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+        <script src="_js/highcharts.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <button id="poop"> My button! </button>
+        </div>
+
+        <div id="poop_response"> jajaja</div>
+
+        <script>
+            var json; 
+
+            $( "#poop" ).click(function() {
+                $.get("http://api.npr.org/query?id=1032&output=JSON&apiKey=MDIyNjgyMTI3MDE0NTUzMjAyNDIwNDFmNg000",
+                    function (data) {
+                        console.log(data);
+                        // do it with jqery like this!
+                        // $("#poop_response").html(data);
+                        // var parsed_data = jQuery.parseJSON(data);
+                        $( "#poop_response" )
+                            .append( "Name: " + data.list.story[0].teaser.$text); // John
+                    },
+                    "json")
+                    // ( "I pooped. poo poo poopadoo party!" );
+            });
+        </script>
+    </body>
+</html>

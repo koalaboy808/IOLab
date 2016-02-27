@@ -19,12 +19,13 @@
 		<header>
 			<img class="monster" src="img/monster_on_monster.png">
 			<h1 id="site-title"> Carlo Liquido </h1>
+			<h2> [ Data Visualization Portfolio ] </h2>
 
-			<nav id="navigation">
+			<!--<nav id="navigation">
 				
 				<a class="nav-button" href="#projects"> Portfolio </a>
 				<a class="nav-button" href="#about"> About Me </a>
-			</nav>
+			</nav>-->
 
 
 			 <!--style="width:60px;height:60px;border:0"-->
@@ -48,9 +49,58 @@
 					</p>
 				</div>
 			</div>
+			<div>
+				<h3 class="project-title"> Life Cycle Assessment</h3>
+				<h4 class="project-subtitle"> [R] [Shiny] [rCharts] [igraph]</h3>
+			</div>
+			<div id="project-2" class="project">
+				<div class="project-image">
+					<div class="project-image-nest">
+						<a href="http://koalaboy808.shinyapps.io/sankey_shiny_endponts" target="_blank">
+							<img src="img/fundacion_sankey.png" alt="fundacion_bubbles">
+						</a>
+					</div>
+					<div class="project-image-nest">
+						<a href="http://koalaboy808.shinyapps.io/ecobase_wine_realdata" target="_blank">
+							<img src="img/fundacion_bubbles.png" alt="fundacion_sankey">
+						</a>
+					</div>
+				</div>
+				<div class="project-detail">
+					<p>
+						At Fundacion Chile, a sustainability non-profit in Santiago, I was tasked with analyzing and creating interactive visualizations for the Life Cycle Assessment team. The target users: consumers and farmers across all of Chile. The key question to be answered: What are the most crucial hotspots in the production process? The goal of the visualization: to bring transparency and facilitate better decision-making.
+					</p>
+					</br>
+					<p>
+						The two graphs to the left represent Grape production in Chile. The first of the two graphs is seperated into two tabs. 1) Impact by Stage--simply use the single filter to see which Impact-Stage combinations are greater than the given threshold. 2) Stage by Family--first choose Stage, then use two filters to distinguish hotspots. Contingent Hotspot colors values are orange, while Absolute Hotspot colors values red. Contingnet Hotspots are defaulted to 5% and defines a Family Hotspot as any two Impacts within a Family greater than the (contingent) threshold value. Absolute Hotspots are defaulted to 10% and defines a Family Hotspot as any Impact greater than the (absolute) threshold value. Columns only show hotspots and will subset automatically given the threshold parameters.
+					</p>
+					</br>
+					<p>
+						The second graph uses a sankey diagram to show the flow of input to ouput. You can subset on EndPoint type and use the hotspot parameter to filter out small values.
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="highcharts.html">
+					<h3 class="project-title"> Change in Music Purchases</h3>
+					<h4 class="project-subtitle"> [HighCharts] [Javascript] [jQuery]  </h3>
+				</a>
+			</div>
+			<div id="project-2" class="project">
+				<div class="project-image">
+					<a href="highcharts.html" >
+						<img src="static_high/img/picture_example.png" style='border:1px solid #000000'>
+					</a>
+				</div>
+				
+				<div class="project-detail">
+					<p>For a class project, we were given a dataset of aggregated music purchases over the course of four years.  The <b>tricky part</b>: How to design a visualization within the confined space of a 800 x 600 pixel area. Given that the <b>user </b> is educated and understands the background of the music scence, can the user easily see common trends, make quick comparisons, and distinguish each value? How well does the visualization follow heuristic guidelines? Are you able to answer a wide variety of likely questions about the data?  Clearly, no one design will answer all questions, but <b>better designs</b> will answer more.</p>
+				</div>
+			</div>
+
 			<a href="d3/index.html">
 				<h3 class="project-title"> Strive HI Performance</h3>
-				<h4 class="project-subtitle"> [d3] [jquery] [inveractive visualization]</h3>
+				<h4 class="project-subtitle"> [d3] [Javascript] [jQuery]</h3>
 			</a>
 			<div id="project-2" class="project">
 				<div class="project-image">
@@ -82,37 +132,8 @@
 				</div>
 			</div>
 
-			<div>
-				<h3 class="project-title"> Life Cycle Assessment</h3>
-				<h4 class="project-subtitle"> [R] [Shiny] [rCharts] [igraph]</h3>
-			</div>
-			<div id="project-2" class="project">
-				<div class="project-image">
-					<div class="project-image-nest">
-						<a href="http://koalaboy808.shinyapps.io/sankey_shiny_endponts" target="_blank">
-							<img src="img/fundacion_bubbles.png" alt="fundacion_bubbles">
-						</a>
-					</div>
-					<div class="project-image-nest">
-						<a href="http://koalaboy808.shinyapps.io/ecobase_wine_realdata" target="_blank">
-							<img src="img/fundacion_sankey.png" alt="fundacion_sankey">
-						</a>
-					</div>
-				</div>
-				<div class="project-detail">
-					<p>
-						At Fundacion Chile, a sustainability non-profit in Santiago, I was tasked with analyzing and creating interactive visualizations for the Life Cycle Assessment team. The target users: consumers and farmers across all of Chile. The key question to be answered: What are the most crucial hotspots in the production process? The goal of the visualization: to bring transparency and facilitate better decision-making.
-					</p>
-					</br>
-					<p>
-						The two graphs to the left represent Grape production in Chile. The first of the two graphs is seperated into two tabs. 1) Impact by Stage--simply use the single filter to see which Impact-Stage combinations are greater than the given threshold. 2) Stage by Family--first choose Stage, then use two filters to distinguish hotspots. Contingent Hotspot colors values are orange, while Absolute Hotspot colors values red. Contingnet Hotspots are defaulted to 5% and defines a Family Hotspot as any two Impacts within a Family greater than the (contingent) threshold value. Absolute Hotspots are defaulted to 10% and defines a Family Hotspot as any Impact greater than the (absolute) threshold value. Columns only show hotspots and will subset automatically given the threshold parameters.
-					</p>
-					</br>
-					<p>
-						The second graph uses a sankey diagram to show the flow of input to ouput. You can subset on EndPoint type and use the hotspot parameter to filter out small values.
-					</p>
-				</div>
-			</div>
+			
+			
 		</div>
 
 			<footer>
