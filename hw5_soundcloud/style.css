@@ -1,0 +1,23 @@
+body {
+	padding: 50px;
+	/*background: rgba(0, 136, 136, 0.1	)*/
+	
+}
+
+.half-container {
+	display: inline-block;
+	width: 25%;
+}
+
+.half-container img {
+	width: 80%;
+}
+
+.full-container {
+	display: inline-block;
+	width: 80%;
+}
+
+.full-container img {
+	width: 50%;
+}

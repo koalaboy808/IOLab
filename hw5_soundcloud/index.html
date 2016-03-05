@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> hw5 </title>
+		<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<header>
+				<h3> SoundCloud </h3>
+			</header>
+			
+			<label >What band you lookin for?<input type="text" name="query_input"></label>
+			<button class="action-button" id="call_api">Submit</button>
+
+			
+	            <div class="row">
+	            	<div class="col s12 m4 l4">
+	                	<div id="chosen_song"> chosen_song </br></div>
+	                </div>
+	                <div class="col s12 m8 l8">
+	                	<div id="query_output"> query output </br></div>
+	                </div>
+	            </div>
+
+
+		
+
+		<footer>
+			<p>&copy; Copyright 2016 Ape Ask, all rights reserved</p>
+		</footer>
+
+		<!--<script type='text/javascript'>//<![CDATA[ 
+			$(window).load(function(){
+				$(document).ready(function(){
+					$('body').stratus({
+					  key: "b3179c0738764e846066975c2571aebb",
+				      auto_play: true,
+				      align: "bottom",
+				      links: "https://soundcloud.com/5-seconds-of-summer/2-5-seconds-of-summer-i-miss"
+					});
+				});
+			});
+		</script>-->
+
+		<script type="text/javascript" src="skeleton.js"></script>
+		<script type='text/javascript' src="https://stratus.soundcloud.com/stratus.js"></script>
+	</body>
+</html>
