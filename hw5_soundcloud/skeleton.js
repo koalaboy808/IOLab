@@ -35,9 +35,11 @@ $('#call_api').on('click', function callAPI() {
 
 $('#query_output').on('click', 'button', function() {
 	move_output = $(this)
-	move_output.parent().removeClass( "half-container" ).addClass( "full-container" );//.append("<button> Up </button>");
-	move_output.html("Remove");
-	$("#chosen_song").prepend(move_output.parent());
+	// move_output.parent().removeClass( "half-container" ).addClass( "full-container" ).append("<button class='up'> Up </button>").append("<button class='down'> Down </button>");
+	
+	// $("#chosen_song").prepend(move_output.parent());
+	$(move_output.parent()).clone().prependTo("#chosen_song").addClass( "full-container" ).append("<button class='up'> Up </button>").append("<button class='down'> Down </button>");
+	// move_output.html("Remove");
 
 })
 
@@ -73,11 +75,19 @@ $("#chosen_song").on('click', 'img', function changeTrack() {
     });
 });
 
-// $("#chosen_song").on('click', 'button', function changeTrack() {
-// 	aler(this.value
+// $(".up").on('click', function(){
+//   var id = $(this).attr('class');
+//   console.log(id)
 // });
 
 $("#chosen_song").on('click', 'button', function changeTrack() {
-	$(this).parent().empty()
+	// alert($(this).attr('class'));
+	if ($(this).attr('class')=="up") {
+		($(this).parent()).insertBefore($(this).parent().prev())
+	} else if ($(this).attr('class')=="down") {
+		($(this).parent()).insertAfter($(this).parent().next())
+	} else {
+		$(this).parent().empty();
+	}
 });
 
