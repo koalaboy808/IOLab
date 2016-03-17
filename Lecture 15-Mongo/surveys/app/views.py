@@ -52,8 +52,8 @@ def submitSurvey():
 		dropdown = request.form.get('dropdown')
 		print(dropdown)
 		print(request.form.get('dropdown'))
-		textarea = request.form.get('comment')
-		print(textarea)
+		textarea = request.form.get('textarea')
+		#print(textarea)
 		print(request.form.get('textarea'))
 
 		#insert code here to send surveyresponse into your mongoDB

@@ -7,8 +7,9 @@ $('#submit-survey').on('click', function submitSurvey() {
 	var vacation = $("input[name=vacation]").val();
 	var feBefore = $("input[name=front-end-before]").val();
 	var feAfter = $("input[name=front-end-after]").val();
-	var dropdown = $("select.dropdown option:selected").val();
-	var textarea = $("textarea#comment_id").text();
+	// var dropdown = $("select.dropdown option:selected").val();
+	var dropdown = $("select[name=dropdown]").val();
+	var textarea = $("textarea[name=comment_id]").val();
 
 	////// DELETE THIS PART FOR NUM. 5 /////////
 	$.post('submit-survey',
